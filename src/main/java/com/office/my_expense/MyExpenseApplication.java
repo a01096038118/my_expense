@@ -1,0 +1,13 @@
+package com.office.my_expense;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class MyExpenseApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(MyExpenseApplication.class, args);
+    }
+
+}

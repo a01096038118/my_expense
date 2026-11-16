@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: my-expense
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/my_expense?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: ${DB_USERNAME:expense_user}
+    password: ${DB_PASSWORD:1234}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: validate      # 개발 중: Entity 기준으로 테이블 자동 생성·변경
+    show-sql: true            # 실행되는 SQL 콘솔 출력
+    properties:
+      hibernate:
+        format_sql: true      # SQL 줄바꿈 정리
+    open-in-view: false
+
+  thymeleaf:
+    cache: false              # 개발 중 화면 수정 바로 반영
+
+server:
+  port: 8080
